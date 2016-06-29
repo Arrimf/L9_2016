@@ -45,6 +45,13 @@ void Print(const T& obj) {
 		++it;
 	}
 }
+template<typename T>
+void Print(std::pair<T,T> ITs) {
+	while (ITs.first != ITs.second) {
+		std::cout << *ITs.first << std::endl;
+		++ITs.first;
+	}
+}
 template<typename T >
 void PrintTop(std::stack<T>& obj) {
 	std::cout << obj.top() << std::endl;

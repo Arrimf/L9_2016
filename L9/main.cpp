@@ -232,12 +232,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		 map<char, map<string,int>> Words;
 		 
-		 for_each(wordss, wordss + 10, [&Words](string str) {
-				
-			 Words[str.front()][str] += 1;	
-		 
-		
-		 });
+		 for_each(wordss, wordss + 10, [&Words](string str) {Words[str.front()][str] += 1;});
 		 
 		/// Print(Words);
 		 _SP
@@ -264,10 +259,35 @@ int _tmain(int argc, _TCHAR* argv[])
 	//		итераторов можно использовать методы lower_bound() и upper_bound()
 
 		 multimap<string, string>DictMap;
+		 
+		 pair<string, string> pairs[] = {
+			 {"strange","странный"},
+			 { "well","колодец" },
+			 { "strange","чужой" },
+			 { "room","место" },
+			 { "strange","чудной" },
+			 { "fire","огонь" },
+			 { "free","свободный" },
+			 { "fire","увольнять" },
+			 { "right","верно" },
+			 { "bank","банк" },
+			 { "right","право" },
+			 { "crane","журавль" },
+			 { "like","походить" },
+			 { "well","хорошо" },
+			 { "free","бесплатный" },
+			 { "room","комната" },
+			 { "like","нравиться" },
+			 { "crane","кран" },
+			 { "bank","берег" },
+		 };
 
-
-   
-
+		 for_each(pairs, pairs + 19, [&DictMap](pair<string, string> val) {
+			 DictMap.insert(val);
+		 });
+		 //Print(DictMap);
+		 Print(DictMap.equal_range("crane"));
+		 _SP
   stop
 
 	return 0;
