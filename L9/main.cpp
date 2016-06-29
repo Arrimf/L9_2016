@@ -181,8 +181,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		 jurMap.emplace("џшвщкщм", 230);
 		 jurMap.emplace("Sidorov", 235);
 
-		 Print(jurMap);
-		 _SP
+		// Print(jurMap);
+		// _SP
 
 			 jurMap.insert(jurMap.erase(jurMap.find("Petrova")), pair<const char*, int>("Sidorova",120));
 
@@ -215,8 +215,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		 for_each(vStr.begin(), vStr.end(),[&strs](string str) {
 				 strs[str] += 1;
 			 });
-		 Print(strs);
-		 _SP
+		// Print(strs);
+		// _SP
 
 
 		//е) 
@@ -232,10 +232,10 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		 map<char, map<string,int>> Words;
 		 
-		 for_each(wordss, wordss + 10, [&Words](string str) {Words[str.front()][str] += 1;});
+		 for_each(wordss, wordss + 10, [&Words](string str) {Words[str.front()][str]++;});
 		 
-		/// Print(Words);
-		 _SP
+		 ////Print(Words);
+		 //_SP
 
 			 //ж)
 			 //создайте структуру данных, котора€ будет хранить информацию о студенческих группах.
@@ -286,7 +286,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			 DictMap.insert(val);
 		 });
 		 //Print(DictMap);
-		 Print(DictMap.equal_range("crane"));
+		// Print(DictMap.equal_range("crane"));
+		 
 		 _SP
   stop
 
