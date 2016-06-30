@@ -234,8 +234,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		 
 		 for_each(wordss, wordss + 10, [&Words](string str) {Words[str.front()][str]++;});
 		 
-		 ////Print(Words);
-		 //_SP
+		 //Print(Words);
+		// cout << Words;
+		// _SP
 
 			 //ж)
 			 //создайте структуру данных, которая будет хранить информацию о студенческих группах.
@@ -246,8 +247,10 @@ int _tmain(int argc, _TCHAR* argv[])
 			 //номера 
 
 			 map<int, multiset<string>>GroupsMap;    //... =)))
+		 //cout << GroupsMap;
 
-
+			 Print(GroupsMap);
+		 _SP
 	////////////////////////////////////////////////////////////////////////////////////
 	//multimap
 	//а) создайте "англо-русский" словарь, где одному и тому же ключу будут соответствовать
@@ -288,7 +291,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		 //Print(DictMap);
 		// Print(DictMap.equal_range("crane"));
 		 
-		 _SP
+		// _SP
   stop
 
 	return 0;
